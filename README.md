@@ -11,35 +11,6 @@ This guide is for the simplest GitHub flow:
 
 It does not require creating a virtual environment.
 
-## What to upload to GitHub
-
-Push the source project to the repository:
-
-- `README.md`
-- `README.github.md`
-- `LICENSE`
-- `pyproject.toml`
-- `setup.py`
-- `BUILD.md`
-- `.gitignore`
-- `src/infra_pilot/`
-- `tests/`
-
-Do not commit generated build outputs:
-
-- `dist/`
-- `src/infra_pilot.egg-info/`
-
-## Prerequisites
-
-- Python 3.9 or newer
-- `pip` available through `python3 -m pip`
-
-Provider CLIs are only needed for real cloud operations:
-
-- `aws`
-- `az`
-- `gcloud`
 
 ## Clone and install
 
