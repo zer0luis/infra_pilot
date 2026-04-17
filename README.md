@@ -93,7 +93,3 @@ python3 -m pip uninstall infra-pilot
 
 - `--dry-run` lets users preview commands without changing cloud resources.
 - Real execution depends on the cloud CLI for the selected provider.
-- AWS profile switching may print shell exports that should be wrapped with
-  `eval`.
-- If users prefer not to rely on the installed command path, `python3 -m
-  infra_pilot.cli ...` always works after installation.
